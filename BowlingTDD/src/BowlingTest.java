@@ -21,6 +21,11 @@ public class BowlingTest {
 		assertEquals(BowlingGame.giveAdditionalPointsForStrike(strikeSequence, 3), 20);
 	}
 	
-	
+	@Test
+	public void giveScoreForNoSparesOrStrikes() throws Exception {
+		ArrayList<Integer> strikeSequence = new ArrayList<Integer>();
+		strikeSequence.addAll(Arrays.asList(9,0,9,0,9,0,9,0,9,0,9,0,9,0,9,0,9,0,9,0));
+		assertEquals(BowlingGame.giveScoreForSequence(strikeSequence), 90);
+	}
 
 }
