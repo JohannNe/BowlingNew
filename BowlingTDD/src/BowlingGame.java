@@ -39,4 +39,5 @@ public class BowlingGame {
 	public static int giveAdditionalPointsForSpare(ArrayList<Integer> sequence, int index){
 		return sequence.get(index+1);
 	}
+	
 }
