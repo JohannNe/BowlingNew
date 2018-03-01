@@ -7,6 +7,6 @@ public class BowlingGame {
 	}
 
 	public static int giveAdditionalPointsForStrike(ArrayList<Integer> sequence, int index){
-		return 0;
+		return sequence.get(index+1) + sequence.get(index+2);
 	}
 }

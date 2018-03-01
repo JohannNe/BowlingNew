@@ -18,7 +18,7 @@ public class BowlingTest {
 	public void giveAdditionalPointsForStrikeFollowedByStrikes() throws Exception {
 		ArrayList<Integer> strikeSequence = new ArrayList<Integer>();
 		strikeSequence.addAll(Arrays.asList(10,10,10,10,10,10,10,10,10,10,10,10));
-		assertEquals(BowlingGame.giveAdditionalPointsForStrike(strikeSequence, 3), 30);
+		assertEquals(BowlingGame.giveAdditionalPointsForStrike(strikeSequence, 3), 20);
 	}
 	
 	
