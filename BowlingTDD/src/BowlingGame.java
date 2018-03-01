@@ -6,7 +6,8 @@ public class BowlingGame {
 		int iScore = 0;
 		int iFrameIndex = 0;
 		int iPins=0;
-
+		int iPinsFirstTry=0;
+		boolean bSecondTry = false;
 		boolean bStrike = false;
 		
 		for(int i=0; i<sequence.size(); i++){
@@ -15,17 +16,28 @@ public class BowlingGame {
 			
 			if(iFrameIndex<9){ //No extra points for strikes or spares in the last frame
 				
-				if(iPins==10){ //Player hits strike
+				if(iPins == 10){ //Player hits strike
 					iScore += giveAdditionalPointsForStrike(sequence,i);
 					bStrike = true;
 				}
-				
+				else if(bSecondTry){
+					if(iPins + iPinsFirstTry == 10){ //Check if player hit a spare
+						iScore += giveAdditionalPointsForSpare(sequence,i);
+					}
+				}
+				else{
+					iPinsFirstTry = iPins;
+				}
 				
 			}
 			
-			if(bStrike){
-				iFrameIndex ++;
+			if(bStrike || bSecondTry){
+				iFrameIndex +=1;
 				bStrike = false;
+				bSecondTry = false;
+			}
+			else{
+				bSecondTry = true;
 			}
 		}
 		
