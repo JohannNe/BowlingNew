@@ -49,5 +49,10 @@ public class BowlingTest {
 		assertEquals(100, BowlingGame.giveScoreForSequence(strikeSequence));
 	}
 	
-
+	@Test
+	public void giveScoreForSequenceWithMissesOnly() throws Exception {
+		ArrayList<Integer> strikeSequence = new ArrayList<Integer>();
+		strikeSequence.addAll(Arrays.asList(0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0));
+		assertEquals(0, BowlingGame.giveScoreForSequence(strikeSequence));
+	}
 }
