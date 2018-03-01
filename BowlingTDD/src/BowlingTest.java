@@ -1,12 +1,17 @@
 import static org.junit.Assert.*;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+
 import org.junit.Test;
 
 public class BowlingTest {
 
 	@Test
-	public void test() {
-		fail("Not yet implemented");
+	public void giveScoreForOnlyStrikes() {
+		ArrayList<Integer> strikeSequence = new ArrayList<Integer>();
+		strikeSequence.addAll(Arrays.asList(10,10,10,10,10,10,10,10,10,10,10,10));
+		assertEquals(BowlingGame.giveScoreForSequence(strikeSequence), 300);
 	}
 
 }
