@@ -6,4 +6,7 @@ public class BowlingGame {
 		return 0;
 	}
 
+	public static int giveAdditionalPointsForStrike(ArrayList<Integer> sequence, int index){
+		return 0;
+	}
 }
