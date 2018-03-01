@@ -27,5 +27,12 @@ public class BowlingTest {
 		strikeSequence.addAll(Arrays.asList(9,0,9,0,9,0,9,0,9,0,9,0,9,0,9,0,9,0,9,0));
 		assertEquals(BowlingGame.giveScoreForSequence(strikeSequence), 90);
 	}
+	
+	@Test
+	public void giveScoreForOnlySpares() throws Exception {
+		ArrayList<Integer> strikeSequence = new ArrayList<Integer>();
+		strikeSequence.addAll(Arrays.asList(5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5));
+		assertEquals(BowlingGame.giveScoreForSequence(strikeSequence), 150);
+	}
 
 }
