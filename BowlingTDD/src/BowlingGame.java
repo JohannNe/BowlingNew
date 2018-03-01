@@ -20,6 +20,7 @@ public class BowlingGame {
 					bStrike = true;
 				}
 				
+				
 			}
 			
 			if(bStrike){
@@ -33,5 +34,9 @@ public class BowlingGame {
 
 	public static int giveAdditionalPointsForStrike(ArrayList<Integer> sequence, int index){
 		return sequence.get(index+1) + sequence.get(index+2);
+	}
+	
+	public static int giveAdditionalPointsForSpare(ArrayList<Integer> sequence, int index){
+		return sequence.get(index+1);
 	}
 }
