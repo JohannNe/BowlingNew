@@ -41,5 +41,13 @@ public class BowlingTest {
 		strikeSequence.addAll(Arrays.asList(5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5));
 		assertEquals(5, BowlingGame.giveAdditionalPointsForSpare(strikeSequence,4));
 	}
+	
+	@Test
+	public void giveScoreForSequenceWithSpareInLastFrame() throws Exception {
+		ArrayList<Integer> strikeSequence = new ArrayList<Integer>();
+		strikeSequence.addAll(Arrays.asList(9,0,9,0,9,0,9,0,9,0,9,0,9,0,9,0,9,0,9,1,9));
+		assertEquals(100, BowlingGame.giveScoreForSequence(strikeSequence));
+	}
+	
 
 }
